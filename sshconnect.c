@@ -8,7 +8,7 @@ int main() {
 
 	serv.sin_family = AF_INET; //for IPv4
 	serv.sin_port = htons(5842); //port no. for the challenge
-	inet_pton(AF_INET, "13.48.176.69", &serv.sin_addr); //converting IP into binary and storing into serv.sin_addr
+	inet_pton(AF_INET, "13.48.176.69", &serv.sin_addr); //converting IP into binary and storing into serv.sin_addr (just do "host vortex.labs.overthewire.org" to get the IP)
 
 	connect(sock, (struct sockaddr *) &serv, sizeof(serv)); //making a connection with the server
 
@@ -24,3 +24,4 @@ int main() {
 
 	return 0;
 }
+
